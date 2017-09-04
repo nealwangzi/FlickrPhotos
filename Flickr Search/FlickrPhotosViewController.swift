@@ -22,6 +22,8 @@ class FlickrPhotosViewController: UICollectionViewController {
     
     let itemsPerRow: CGFloat = 3
     
+    fileprivate let reuseHeaderIdentifier = "FlickrPhotoHeaderView"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,6 +102,22 @@ extension FlickrPhotosViewController {
         cell.imageView.image = flickrPhoto.thumbnail
         
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        // 1
+        switch kind {
+            //2
+        case UICollectionElementKindSectionHeader:
+            //3
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: reuseHeaderIdentifier, for: indexPath) as! FlickrPhotoHeaderView
+            
+            headerView.label.text = searches[(indexPath as NSIndexPath).section].searchTerm
+            return headerView
+        default:
+            //
+            assert(false,"unexpected element kind")
+        }
     }
 }
 
