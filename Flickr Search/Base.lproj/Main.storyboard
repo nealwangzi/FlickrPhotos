@@ -34,15 +34,21 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KPT-X0-16e">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                         </imageView>
+                                        <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NFB-Z4-ahJ">
+                                            <rect key="frame" x="82" y="82" width="37" height="37"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="NFB-Z4-ahJ" firstAttribute="centerX" secondItem="tXg-jM-T47" secondAttribute="centerX" id="3q3-CY-c5U"/>
                                     <constraint firstAttribute="trailing" secondItem="KPT-X0-16e" secondAttribute="trailing" id="Bvp-hx-6jM"/>
+                                    <constraint firstItem="NFB-Z4-ahJ" firstAttribute="centerY" secondItem="tXg-jM-T47" secondAttribute="centerY" id="Y56-Ib-Dra"/>
                                     <constraint firstItem="KPT-X0-16e" firstAttribute="leading" secondItem="tXg-jM-T47" secondAttribute="leading" id="b7B-8q-Ot6"/>
                                     <constraint firstAttribute="bottom" secondItem="KPT-X0-16e" secondAttribute="bottom" id="cgj-gU-18R"/>
                                     <constraint firstItem="KPT-X0-16e" firstAttribute="top" secondItem="tXg-jM-T47" secondAttribute="top" id="dLw-gg-eZ1"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="NFB-Z4-ahJ" id="QwC-fy-32e"/>
                                     <outlet property="imageView" destination="KPT-X0-16e" id="7vu-w6-9u2"/>
                                 </connections>
                             </collectionViewCell>
