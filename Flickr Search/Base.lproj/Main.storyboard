@@ -90,6 +90,11 @@
                                 <outlet property="delegate" destination="Wld-bW-d0G" id="JdS-f8-OjG"/>
                             </connections>
                         </textField>
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Ywd-k4-XR6">
+                            <connections>
+                                <action selector="share:" destination="Wld-bW-d0G" id="XJu-j9-1Xo"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7xC-bK-vtk" userLabel="First Responder" sceneMemberID="firstResponder"/>
